@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/news_nav_graph"
+    app:startDestination="@id/pokemonFragments">
+
+    <fragment
+        android:id="@+id/pokemonFragments"
+        android:name="br.com.module.pokeapi.ui.fragments.PokemonFragment"
+        android:label="Pokemons">
+        <action
+            android:id="@+id/action_pokemonFragments_to_detailFragments"
+            app:destination="@id/detailFragments"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragments"
+        android:name="br.com.module.pokeapi.ui.fragments.DetailFragment"
+        android:label="Detail">
+
+        <action
+            android:id="@+id/action_detailFragments_to_pokemonFragments"
+            app:destination="@id/pokemonFragments"
+            app:enterAnim="@anim/slide_out_left"
+            app:exitAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_out_right"
+            app:popExitAnim="@anim/slide_in_left"/>
+        <argument
+            android:name="result"
+            app:argType="br.com.module.pokeapi.models.Result" />
+
+    </fragment>
+
+
+</navigation>
