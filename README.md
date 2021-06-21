@@ -4,7 +4,7 @@ Improvements for the future
 
 DI with Koin,
 Elvis operator in Non-null,
-Inteface segregation between Repository and ViewModel,
+Inteface segregation from Solid between Repository and ViewModel,
 Selead class Result,
 Kotlin Coroutines
 Unit test, should test:
